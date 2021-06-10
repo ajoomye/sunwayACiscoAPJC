@@ -1,0 +1,86 @@
+<!-- Note that when setting turn on/off times, the script will not stop running and the set time won't appear.
+	Please stop and reload the page-->
+{% extends 'headerFooter.html' %}
+
+  {% block title %} <title>Home</title> {% endblock %}
+
+<body>
+
+{% block header %}
+<!-- <header>
+		<h3>Welcome to Automatic Ports Shutdown</h3>
+</header> -->
+{% endblock %}
+
+    <!-- Contents -->
+{% block content %}
+<!-- <div class="content">
+  <div class="card col-md-4" style="height: 400px; width: 450px; overflow: scroll;">
+		  <div class="card-header"> <strong>Devices On&nbsp;</strong></div>
+		  <ul class="list-group list-group-flush">
+        {% for item in data %}
+		    <li class="list-group-item">{{ item }}</li>
+        {% endfor %}
+	    </ul>
+	  </div>
+
+  	<div class="form" style="height: 400px; width: 400px;">
+  	  <form method="POST">
+  		  <strong>Set Time for all devices</strong><br>
+  	    <p>Turn on at</p>
+    		<input type="time" name="timeon" id="timeon">
+        <br>
+        <br>
+    		<p>Turn off at</p>
+    		<input type="time" name="timeoff" id="timeoff">
+        <br>
+    		<input type="submit" style="align: center">
+
+		<h2><b>Devices will turn on at {{ timeon }} and turn off at {{ timeoff }}</b></h2>
+
+      </form>
+    </div>
+
+</div> -->
+
+
+
+<div class="contentContainer">
+  <div class="content">
+    <div class="card col-md-4" style="height: 14.5rem; overflow: scroll;">
+  		  <div class="card-header"> <strong>Devices On&nbsp;</strong></div>
+  		  <ul class="list-group list-group-flush">
+
+          {% for item in data %}
+          <li class="list-group-item">{{ item }}</li>
+          {% endfor %}
+
+        </ul>
+  	  </div>
+
+    	<div class="form" style="height: 14.5rem;">
+    	  <form method="POST">
+    		  <h5><strong>Set Time for all devices</strong></h5>
+    	    <div class="sectionTurnOn">
+            <p>Turn on at</p><input type="time" name="timeon" id="timeon">
+          </div>
+          <div class="sectionTurnOff">
+            <p>Turn off at</p><input type="time" name="timeoff" id="timeoff">
+          </div>
+
+      		<div class="sectionSubmit">
+            <input class="submitButton" type="submit" style="align: center">
+          </div>
+
+  		<h8>Devices will turn on at <b>{{ timeon }}</b> and turn off at <b>{{ timeoff }}</b></h8>
+
+        </form>
+      </div>
+
+  </div>
+</div>
+{% endblock %}
+    <!--footer -->
+
+</body>
+</html>

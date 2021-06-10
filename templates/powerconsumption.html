@@ -1,0 +1,48 @@
+<!-- Snapchat
+page created: 14/11/19
+Last page update: 19/11/2019
+-->
+
+{% extends 'headerFooter.html' %}
+
+  {% block title %} <title>Home</title> {% endblock %}
+
+<body>
+
+{% block header %}
+
+{% endblock %}
+
+    <!-- Contents -->
+{% block content %}
+<!-- <b>Showing Details only for Meraki devices</b> -->
+<!-- <br> -->
+<div class="contentContainer">
+  <p class="note" style="font-size: 20px;">*Showing Details only for Meraki devices</p>
+    <div class="contentdevices">
+    	<table width="1000" border="1">
+      <tbody>
+        <tr>
+        {% for header in headings %}
+          <th>{{ header }}</th>
+        {% endfor %}
+        </tr>
+
+        {% for item in data %}
+        <tr>
+          <td>{{ item[0] }}</td>
+          <td>{{ item[1] }}</td>
+          <td>{{ item[2] }}</td>
+          <td>{{ item[3] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+
+    </div>
+    </div>
+{% endblock %}
+
+</body>
+</html>
