@@ -8,7 +8,8 @@ Before running the codes:
   
 To run the code, run the blueprints/app.py file. Go to your browser and go to http://127.0.0.1:5000/
 
-
-    
+Notes:
+1. Please refresh the home page after input the time on/off to view the time set on the home page.
+2. The Webex API uses a bot in a space with the team members. Please refer to video submission for demonstration.
 
 
